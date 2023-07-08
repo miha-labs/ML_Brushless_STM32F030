@@ -1,0 +1,16 @@
+EWARM/Brushless_STM32F030/
+settings/
+
+Obj/
+List/
+Exe/
+
+*.mxproject
+
+*.ewd
+*.ewp
+*.ewt
+*.eww
+
+*.dep
+*.bin
