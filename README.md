@@ -7,7 +7,7 @@ STM32F030で、ブラシレスモーターを制御するサンプルです。
 
 # DEMO
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Ebb64oZ-lXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![](https://img.youtube.com/vi/Ebb64oZ-lXk/0.jpg)](https://www.youtube.com/watch?v=Ebb64oZ-lXk)
 
 # Features
 
