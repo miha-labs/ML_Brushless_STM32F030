@@ -15,13 +15,13 @@
 /* Structure */
 typedef struct
 {
-	int16_t	prop;		// •Î·
-	int32_t	intg;		// Ï•ª’l (static)
-	int16_t	diff;		// ”÷•ª’l (static)
-	int16_t	kp;			// ”ä—áƒQƒCƒ“
-	int16_t	ki;			// Ï•ªƒQƒCƒ“
-	int16_t	kd;			// Ï•ªƒQƒCƒ“
-	int32_t	ilim;		// Ï•ªãŒÀ’l
+	int16_t	prop;		// åå·®
+	int32_t	intg;		// ç©åˆ†å€¤ (static)
+	int16_t	diff;		// å¾®åˆ†å€¤ (static)
+	int16_t	kp;			// æ¯”ä¾‹ã‚²ã‚¤ãƒ³
+	int16_t	ki;			// ç©åˆ†ã‚²ã‚¤ãƒ³
+	int16_t	kd;			// ç©åˆ†ã‚²ã‚¤ãƒ³
+	int32_t	ilim;		// ç©åˆ†ä¸Šé™å€¤
 } PID_t;
 
 

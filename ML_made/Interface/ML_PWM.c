@@ -64,8 +64,8 @@ static void SetOCMode(ch_e ch, uint32_t mode)
 ----------------------------------------------------------------------------- */
 
 /*---------------------
- * ƒnƒCƒTƒCƒho—Í : Lo
- * ƒ[ƒTƒCƒho—Í : Lo
+ * ãƒã‚¤ã‚µã‚¤ãƒ‰å‡ºåŠ› : Lo
+ * ãƒ­ãƒ¼ã‚µã‚¤ãƒ‰å‡ºåŠ› : Lo
 ---------------------*/
 void PWMout_LO_LO(ch_e ch)
 {
@@ -76,8 +76,8 @@ void PWMout_LO_LO(ch_e ch)
 }
 
 /*---------------------
- * ƒnƒCƒTƒCƒho—Í : Lo
- * ƒ[ƒTƒCƒho—Í : Hi
+ * ãƒã‚¤ã‚µã‚¤ãƒ‰å‡ºåŠ› : Lo
+ * ãƒ­ãƒ¼ã‚µã‚¤ãƒ‰å‡ºåŠ› : Hi
 ---------------------*/
 void PWMout_LO_HI(ch_e ch)
 {
@@ -88,8 +88,8 @@ void PWMout_LO_HI(ch_e ch)
 }
 
 /*---------------------
- * ƒnƒCƒTƒCƒho—Í : Hi
- * ƒ[ƒTƒCƒho—Í : Lo
+ * ãƒã‚¤ã‚µã‚¤ãƒ‰å‡ºåŠ› : Hi
+ * ãƒ­ãƒ¼ã‚µã‚¤ãƒ‰å‡ºåŠ› : Lo
 ---------------------*/
 void PWMout_HI_LO(ch_e ch)
 {
@@ -100,8 +100,8 @@ void PWMout_HI_LO(ch_e ch)
 }
 
 /*---------------------
- * ƒnƒCƒTƒCƒho—Í : PWM
- * ƒ[ƒTƒCƒho—Í : Lo
+ * ãƒã‚¤ã‚µã‚¤ãƒ‰å‡ºåŠ› : PWM
+ * ãƒ­ãƒ¼ã‚µã‚¤ãƒ‰å‡ºåŠ› : Lo
 ---------------------*/
 void PWMout_PP_LO(ch_e ch)
 {
@@ -112,8 +112,8 @@ void PWMout_PP_LO(ch_e ch)
 }
 
 /*---------------------
- * ƒnƒCƒTƒCƒho—Í : Lo
- * ƒ[ƒTƒCƒho—Í : PWM
+ * ãƒã‚¤ã‚µã‚¤ãƒ‰å‡ºåŠ› : Lo
+ * ãƒ­ãƒ¼ã‚µã‚¤ãƒ‰å‡ºåŠ› : PWM
 ---------------------*/
 void PWMout_LO_PP(ch_e ch)
 {
@@ -124,8 +124,8 @@ void PWMout_LO_PP(ch_e ch)
 }
 
 /*---------------------
- * ƒnƒCƒTƒCƒho—Í : PWM(•â‘Š)
- * ƒ[ƒTƒCƒho—Í : PWM
+ * ãƒã‚¤ã‚µã‚¤ãƒ‰å‡ºåŠ› : PWM(è£œç›¸)
+ * ãƒ­ãƒ¼ã‚µã‚¤ãƒ‰å‡ºåŠ› : PWM
 ---------------------*/
 void PWMout_PN_PP(ch_e ch)
 {
@@ -136,8 +136,8 @@ void PWMout_PN_PP(ch_e ch)
 }
 
 /*---------------------
- * ƒnƒCƒTƒCƒho—Í : PWM
- * ƒ[ƒTƒCƒho—Í : PWM(•â‘Š)
+ * ãƒã‚¤ã‚µã‚¤ãƒ‰å‡ºåŠ› : PWM
+ * ãƒ­ãƒ¼ã‚µã‚¤ãƒ‰å‡ºåŠ› : PWM(è£œç›¸)
 ---------------------*/
 void PWMout_PP_PN(ch_e ch)
 {
@@ -148,7 +148,7 @@ void PWMout_PP_PN(ch_e ch)
 }
 
 /*---------------------
- * Duty”äÝ’è
+ * Dutyæ¯”è¨­å®š
 ---------------------*/
 void PWMout_SetDuty(uint16_t duty)
 {
