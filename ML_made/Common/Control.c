@@ -152,9 +152,9 @@ void Ctr_ControlMotor(void)
 
 
   /* PWM out */
-	if( out>0 )		ctr_trg.rotation = ROT_CW;	/* ���] */
-	else if( out<0 )	ctr_trg.rotation = ROT_CCW;	/* �t�] */
-	else				ctr_trg.rotation = ROT_FREE;	/* ��~ */
+	if( out>0 )		ctr_trg.rotation = ROT_CW;
+	else if( out<0 )	ctr_trg.rotation = ROT_CCW;
+	else				ctr_trg.rotation = ROT_FREE;
 	
 	outputPWM(out);
 }

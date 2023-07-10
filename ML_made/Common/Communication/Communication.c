@@ -14,7 +14,7 @@
 ----------------------------------------------------------------------------- */
 #define	RX_HEADER	0xAB
 #define	TX_HEADER	0xBA
-#define	TX_SIZE	81		// ‘—Mƒf[ƒ^”
+#define	TX_SIZE	81		// é€ä¿¡ãƒ‡ãƒ¼ã‚¿æ•°
 
 
 /* -----------------------------------------------------------------------------
@@ -72,17 +72,17 @@ static void generatePacket(uint8_t *data, uint16_t size)
 	data[0] = TX_HEADER;
 	
 	uint16_t count = 1;
-	uint16_t end_speed = (size-1)/2;	// ƒwƒbƒ_‚ðœ‚¢‚½”¼•ª
+	uint16_t end_speed = (size-1)/2;	// ãƒ˜ãƒƒãƒ€ã‚’é™¤ã„ãŸåŠåˆ†
 	uint16_t end_current = size;
 	
-	// ‘¬“xƒf[ƒ^
+	// é€Ÿåº¦ãƒ‡ãƒ¼ã‚¿
 	while(count<end_speed)
 	{
 		int16ToBytes( Log_ReadSpeed(), data+count );
 		count+=2;
 	}
 	
-	// “d—¬ƒf[ƒ^
+	// é›»æµãƒ‡ãƒ¼ã‚¿
 	while(count<end_current)
 	{
 		int16ToBytes( Log_ReadCurrent(), data+count );

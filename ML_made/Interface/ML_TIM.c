@@ -43,8 +43,8 @@ extern TIM_HandleTypeDef htim6;
 void TIM_Startup(void)
 {
 	/* TIM3 */
-	HAL_TIMEx_HallSensor_Start_IT(&htim3);			// �z�[���Z���T���荞��
-	__HAL_TIM_ENABLE_IT(&htim3, TIM_IT_UPDATE);		// TIM3�I�[�o�[�t���[(�z�[���Z���T���荞�݂�500msec�������Ȃ�)���荞��
+	HAL_TIMEx_HallSensor_Start_IT(&htim3);
+	__HAL_TIM_ENABLE_IT(&htim3, TIM_IT_UPDATE);
 	
 	/* TIM6 */
 	HAL_TIM_Base_Start_IT(&htim6);
@@ -53,27 +53,26 @@ void TIM_Startup(void)
 
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 {
-	/* �z�[���Z���T�؂�ւ�芄�荞�� */
 	uint32_t cnt_hall = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
 	
-	Ctr_HallSensorDetection(cnt_hall);			// PWM�o�͐؂�ւ�/���x���Z
+	Ctr_HallSensorDetection(cnt_hall);
 	
-	__HAL_TIM_CLEAR_IT(htim, TIM_IT_UPDATE);	// �z�[���Z���T�̊��荞�݂��������ꍇ�̓I�[�o�[�t���[���荞�݃X�L�b�v
+	__HAL_TIM_CLEAR_IT(htim, TIM_IT_UPDATE);
 }
 
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-	/* ��莞�ԃz�[���Z���T���荞�ݖ��� */
+	/* hall sensor timeout */
 	if(htim->Instance==TIM3)
 	{
 		Ctr_HallSensorTimeout();
 	}
 	
-	/* 10msec��������荞�� */
+	/* 10msec */
 	if(htim->Instance==TIM6)
 	{
-		Ctr_ControlMotor();	// ���[�^�[����
-		Ctr_LogWrite();		// ���x/�d�����O
+		Ctr_ControlMotor();
+		Ctr_LogWrite();
 	}
 }

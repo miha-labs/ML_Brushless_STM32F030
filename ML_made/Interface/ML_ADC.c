@@ -62,17 +62,17 @@ void ADC_SetChannel(adc_ch_e ch)
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *AdcHandle)
 {
-	/* (PWMƒgƒŠƒK[Œã)AD•ÏŠ·Š®—¹Š„‚è‚İ */
-	if( !PWMout_IsCountUp() ) return;	// PWMƒJƒEƒ“ƒgƒAƒbƒv(OFF)‚ÍAD•ÏŠ·Œ‹‰Ê‚ğ•Û‘¶‚µ‚È‚¢
+	/* (PWMãƒˆãƒªã‚¬ãƒ¼å¾Œ)ADå¤‰æ›å®Œäº†å‰²ã‚Šè¾¼ã¿ */
+	if( !PWMout_IsCountUp() ) return;	// PWMã‚«ã‚¦ãƒ³ãƒˆã‚¢ãƒƒãƒ—æ™‚(OFF)ã¯ADå¤‰æ›çµæœã‚’ä¿å­˜ã—ãªã„
 	
 	
 	//HAL_GPIO_WritePin(DEBUG_O_GPIO_Port, DEBUG_O_Pin, GPIO_PIN_SET);
-	/* vvv Š„‚è‚İŠÔŒv‘ªŠJn vvv */
+	/* vvv å‰²ã‚Šè¾¼ã¿æ™‚é–“è¨ˆæ¸¬é–‹å§‹ vvv */
 	{
 		uint16_t ad_val = (uint16_t)HAL_ADC_GetValue(AdcHandle);
 	
-		Ctr_CurrentDetection(ad_val);	// “d—¬’l‰‰Z
+		Ctr_CurrentDetection(ad_val);	// é›»æµå€¤æ¼”ç®—
 	}
-	/* ^^^ Š„‚è‚İŠÔŒv‘ªI—¹ ^^^ */
+	/* ^^^ å‰²ã‚Šè¾¼ã¿æ™‚é–“è¨ˆæ¸¬çµ‚äº† ^^^ */
 	//HAL_GPIO_WritePin(DEBUG_O_GPIO_Port, DEBUG_O_Pin, GPIO_PIN_RESET);
 }
